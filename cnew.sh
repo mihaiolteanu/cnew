@@ -52,7 +52,6 @@ $(TARGET): $(OBJS)
 OBJS_MINUS_TARGET := $(filter-out obj/$(TARGET).o, $(OBJS))
 $(TARGET_TEST): $(OBJS_MINUS_TARGET) $(TEST_OBJS)
 	$(LINK.o) -o $@ $^
-	@rm tests/*.o
 
 -include $(DEPDIR)/*.d
 
